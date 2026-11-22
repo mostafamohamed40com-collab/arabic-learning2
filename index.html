@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>رحلة في عالم الضاد</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="bg" id="bg" aria-hidden="true"></div>
+
+<section id="welcome" class="screen">
+  <div class="card wcard">
+    <div class="logo">ضَ</div>
+    <h1 class="title">رحلة في عالم الضاد</h1>
+    <p class="sub">لغتنا العربية كنزٌ يستحق الرحلة. اكتب اسمك لنبدأ مع الفعل اللازم والفعل المتعدي.</p>
+    <form id="nameForm" autocomplete="off">
+      <label for="nameIn">اسمك</label>
+      <input id="nameIn" maxlength="20" placeholder="مثال: أحمد">
+      <p id="nameErr" class="err" role="alert"></p>
+      <button class="btn gold" id="nameBtn" type="submit">ابدأ الرحلة</button>
+    </form>
+  </div>
+</section>
+
+<div id="app" hidden>
+  <header>
+    <div class="brand">ضَ <span>رحلة في عالم الضاد</span></div>
+    <div class="chip">
+      <span>👤 <b id="hName"></b></span>
+      <span>⭐ <b id="hPts">0</b></span>
+      <button id="chg" class="mini">تغيير الاسم</button>
+      <button id="snd" class="mini" title="الصوت" aria-label="تشغيل أو إيقاف الصوت">🔊</button>
+    </div>
+  </header>
+  <nav>
+    <button data-v="home">🏠 لوحتي</button>
+    <button data-v="lesson">📖 الشرح</button>
+    <button data-v="quiz">🎯 الاختبار</button>
+    <button data-v="badges">🏅 الشارات</button>
+  </nav>
+  <main id="view"></main>
+  <footer>الأمثلة والأسئلة من وضع الموقع على نهج تدريبات الكتاب، وتُراجَع مع كتاب الوزارة.</footer>
+</div>
+
+<div id="modal"></div>
+<div id="toast" role="status"></div>
+<script src="js/questions.js"></script>
+<script src="js/student.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
